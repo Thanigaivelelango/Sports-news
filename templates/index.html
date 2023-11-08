@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sports Category Prediction</title>
+</head>
+
+<body>
+    <h1>Sports Category Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="headline">Enter News Headline:</label><br>
+        <input type="text" id="headline" name="headline" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Predicted Category for '{{ headline }}': {{ prediction }}</h2>
+    {% endif %}
+</body>
+
+</html>
